@@ -1,0 +1,61 @@
+$buttonColor: rgb(82, 202, 82);
+$fontPrimary: 'Bebas Neue',cursive; 
+$fontSecundary: 'Urbanist', sans-serif;
+$anchoTablet: 768px;
+$anchoPc:1024px;
+$heightLarge:30%;
+
+@mixin sizes($widthTablet, $heightLarge){
+    width:$widthTablet;
+    height: $heightLarge;
+    
+}
+
+@mixin justify() {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer{
+    background-color: $buttonColor;
+    &--color{ 
+        background-color: red;
+        // operacion //
+        background-size: $anchoPc/2;
+        //mixin//
+        @include sizes(800px, 200px);
+    }
+   
+}
+
+.header{
+    background-color: rgb(82, 202, 82);
+    &--light{
+        background-color: none;
+    }
+}
+
+.banner{
+    font-family: 'Nautilus pompilius',cursive;
+    font-size:100px;
+    &--bannerSecundary{
+        font-family: $fontPrimary;
+        font-size: 120px;
+        background-image: linear-gradient(
+        to bottom right,
+        #4affde 0%, #5b9dff 40%, #d06bff 60%, #ff34d2 100%
+    );
+    }
+}
+
+.seccionContacto{
+    display:flex ;
+    flex-direction: column;
+    margin: 5%;
+    &--contactoDos{
+        margin: 2% 5%;
+        padding: 5%;
+
+    }
+}
